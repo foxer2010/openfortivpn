@@ -22,8 +22,7 @@ jobs:
           export PKG_CONFIG_PATH="$HOME/.openfortivpn-deps/lib/pkgconfig"
           ./configure --prefix=/usr --sysconfdir=/etc
       - name: debuild
-        run: |
-        debuild -b -uc -us
+        run: debuild -b -uc -us
 
       - uses: actions/upload-artifact@v3
         with:
